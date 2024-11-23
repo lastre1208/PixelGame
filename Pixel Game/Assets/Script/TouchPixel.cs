@@ -6,14 +6,19 @@ public class TouchPixel : MonoBehaviour
 {
     private Transform ParentObject;
     private BoxCollider2D boxCollider2D;
+    public BoxCollider2D BoxCollider2D
+    {
+        get { return boxCollider2D; }
+        set { boxCollider2D = value; }  
+    }
     LookPlayer lookPlayer;
-    public float snapDistance = 0.5f;
+   
     // Start is called before the first frame update
     void Start()
     {
        lookPlayer = GetComponent<LookPlayer>();
         ParentObject = transform.parent;
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        BoxCollider2D = GetComponent<BoxCollider2D>();
         
     }
 
@@ -31,7 +36,7 @@ public class TouchPixel : MonoBehaviour
     }
     void SetTrigger()
     {
-        boxCollider2D.isTrigger= true;
+        BoxCollider2D.isTrigger= true;
     }
     
 }
