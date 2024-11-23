@@ -2,24 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackParameter
-{
-    public GameObject target;
-    public GameObject attackObject;
-    public float damage;
-    public float deliteTime;
-    public float Lv;
-   public float moveSpeed;
-  public  bool canDelete;
-    
-}
+
 public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚ÌƒXƒNƒŠƒvƒg‚É
 {
     // Start is called before the first frame update
+
    
-    [SerializeField] AttackParameter attackParameter;
+   
     protected float currentTime;
-    protected bool canAttack;
+    protected bool canAttack=true;
     // Update is called once per frame
 
 
@@ -31,13 +22,30 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
             canAttack = false;
         }
     }
+    protected virtual void  UpdateAttack(AttackParameter attackParameter)
+    {
+        PerformAttack();
+        if (JudgeDelete(attackParameter))
+        {
+           if(attackParameter.attackObject != null)//“G‚É‚Ô‚Â‚©‚Á‚Äõ–½‚æ‚èæ‚É€‚ñ‚Å‚¢‚éê‡‚ÍŠÔŒo‰ß‚ÅËo
+            {
+                EndAttack(attackParameter);
+            }
+            ResetTime();    
+            StartAttack(attackParameter);
+        }
+    }
     protected virtual void PerformAttack()//UŒ‚’†(õ–½‚ğƒJƒEƒ“ƒg)
     {
-        currentTime += Time.deltaTime;
+        if (!canAttack)
+        {
+            currentTime += Time.deltaTime;
+        }
+       
     }
     protected virtual bool JudgeDelete(AttackParameter attackParameter)//õ–½‚ªs‚«‚½‚©”»’f‚·‚é
     {
-        return (currentTime > attackParameter.deliteTime ? true : false);
+        return (currentTime > attackParameter.deliteTimeRatio ? true : false);
     }
     protected virtual void ResetTime()//ŠÔƒŠƒZƒbƒgBÄ“xUŒ‚‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚é
     {
