@@ -13,9 +13,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2052801585546199430}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: attackParameter.SpeedRatio
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.attackObject
       value: 
       objectReference: {fileID: 2062314386349419751, guid: 6d62f0c5c2e33a84e982f91aae2bd45b, type: 3}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: attackParameter.deliteTimeRatio
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5943366223967160253, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

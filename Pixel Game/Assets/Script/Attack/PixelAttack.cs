@@ -11,31 +11,32 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
    
     protected float currentTime;
     protected bool canAttack=true;
+    private GameObject currentObject;
     // Update is called once per frame
 
 
-    protected virtual void StartAttack(AttackParameter attackParameter)//UŒ‚‚µn‚ß
+    protected  void StartAttack(AttackParameter attackParameter)//UŒ‚‚µn‚ß
     {
         if (canAttack)
         {
-            Instantiate(attackParameter.attackObject, transform.position, transform.rotation);
+            currentObject=Instantiate(attackParameter.attackObject, transform.position, transform.rotation);
             canAttack = false;
         }
     }
-    protected virtual void  UpdateAttack(AttackParameter attackParameter)
+    protected void  UpdateAttack(AttackParameter attackParameter)
     {
         PerformAttack();
         if (JudgeDelete(attackParameter))
         {
-           if(attackParameter.attackObject != null)//“G‚É‚Ô‚Â‚©‚Á‚Äõ–½‚æ‚èæ‚É€‚ñ‚Å‚¢‚éê‡‚ÍŠÔŒo‰ß‚ÅËo
+           if(currentObject != null)//“G‚É‚Ô‚Â‚©‚Á‚Äõ–½‚æ‚èæ‚É€‚ñ‚Å‚¢‚éê‡‚ÍŠÔŒo‰ß‚ÅËo
             {
-                EndAttack(attackParameter);
+                EndAttack();
             }
             ResetTime();    
             StartAttack(attackParameter);
         }
     }
-    protected virtual void PerformAttack()//UŒ‚’†(õ–½‚ğƒJƒEƒ“ƒg)
+    protected  void PerformAttack()//UŒ‚’†(õ–½‚ğƒJƒEƒ“ƒg)
     {
         if (!canAttack)
         {
@@ -43,18 +44,18 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
         }
        
     }
-    protected virtual bool JudgeDelete(AttackParameter attackParameter)//õ–½‚ªs‚«‚½‚©”»’f‚·‚é
+    protected  bool JudgeDelete(AttackParameter attackParameter)//õ–½‚ªs‚«‚½‚©”»’f‚·‚é
     {
-        return (currentTime > attackParameter.deliteTimeRatio ? true : false);
+        return currentTime > attackParameter.deliteTimeRatio ;
     }
-    protected virtual void ResetTime()//ŠÔƒŠƒZƒbƒgBÄ“xUŒ‚‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚é
+    protected  void ResetTime()//ŠÔƒŠƒZƒbƒgBÄ“xUŒ‚‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚é
     {
         currentTime = 0;
         canAttack = true;
     }
-    protected virtual void EndAttack(AttackParameter attackParameter)//UŒ‚I—¹(“G‚É‚Ô‚Â‚©‚é‚©Aõ–½‚É’B‚µ‚½‚çÁ‹‚·‚é)
+    protected void EndAttack()//UŒ‚I—¹(“G‚É‚Ô‚Â‚©‚é‚©Aõ–½‚É’B‚µ‚½‚çÁ‹‚·‚é)
     {
-        Destroy(attackParameter.attackObject);
+        Destroy(currentObject);
     }
     
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5510703059869297023
+--- !u!1001 &2042499021365966221
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,10 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 55936589767973226, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Name
-      value: Bullet Variant 1
+      value: Bullet_Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 5831900949661392263, guid: 2a71c8b218c54d641945c0061b1f7013, type: 3}
     - target: {fileID: 5615327647347236824, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.095747255
@@ -54,15 +62,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6608248760429400717, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6608248760429400717, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6608248760429400717, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

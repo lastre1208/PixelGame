@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bullet : PixelAttack//弾を一定の間隔で放つスクリプト。
 {
     // Start is called before the first frame update
-    [SerializeField] AttackParameter attackParameter;
+    public AttackParameter attackParameter;
   
     [SerializeField] TouchPixel touch;
     private bool Touched=false;

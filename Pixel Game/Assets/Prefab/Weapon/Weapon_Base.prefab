@@ -127,9 +127,9 @@ MonoBehaviour:
   attackParameter:
     target: {fileID: 8362739448953813648}
     attackObject: {fileID: 55936589767973226, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
-    damageRatio: 0
-    deliteTimeRatio: 0
-    SpeedRatio: 0
+    damageRatio: 10
+    deliteTimeRatio: 2
+    SpeedRatio: 2.5
     canDelete: 0
   touch: {fileID: 4148797866617681613}
 --- !u!61 &786959179557689231

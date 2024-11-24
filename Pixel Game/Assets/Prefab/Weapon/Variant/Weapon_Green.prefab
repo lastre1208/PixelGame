@@ -13,6 +13,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8290074063367198963}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: attackParameter.SpeedRatio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.attackObject
       value: 
       objectReference: {fileID: 7253597615579652467, guid: 928a538b705f9464eb1a7c7a77886cda, type: 3}
