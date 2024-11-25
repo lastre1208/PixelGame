@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpawnObject
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 107248d3ae23990468beb315cab596a5, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: spawnobject.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: spawnobject.Array.data[0]
+    value: 
+    objectReference: {fileID: 4984829747643798657, guid: d695373383bfb2242965f6f29ad56006, type: 3}
+  - target: {fileID: 0}
+    propertyPath: spawnobject.Array.data[1]
+    value: 
+    objectReference: {fileID: 8290074063367198963, guid: 3eb8b4c26e97b0f41996046b2b308a60, type: 3}
+  - target: {fileID: 0}
+    propertyPath: spawnobject.Array.data[2]
+    value: 
+    objectReference: {fileID: 8613241905820390580, guid: 61fa637fc3c8aa748ad5d6b55d264546, type: 3}
+  - target: {fileID: 0}
+    propertyPath: spawnobject.Array.data[3]
+    value: 
+    objectReference: {fileID: 2052801585546199430, guid: 2a71c8b218c54d641945c0061b1f7013, type: 3}
+  - target: {fileID: 0}
+    propertyPath: Area
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SpawnNumber
+    value: 100
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

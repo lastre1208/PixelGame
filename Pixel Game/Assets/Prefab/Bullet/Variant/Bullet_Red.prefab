@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key0.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 55936589767973226, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Name
       value: Bullet_Red
