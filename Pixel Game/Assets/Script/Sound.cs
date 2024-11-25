@@ -8,15 +8,24 @@ public class Sound : MonoBehaviour
     [SerializeField] AudioClip audioClip;
     [SerializeField] string Audio;
    private AudioSource source;
+    private const float PITCHUP=0.015f;
+    private const float PITCHLIMIT = 2f;
     // Update is called once per frame
 
     public void PlaySound()
     {
         GameObject target = GameObject.Find(Audio);
-        if (target != null)
+
+        source = target.GetComponent<AudioSource>();
+        PitchUp();
+        source.PlayOneShot(audioClip);
+        
+    }
+    public void PitchUp()//êGÇÈÇΩÇ—Ç…ÉsÉbÉ`Çè„Ç∞ÇÈ(Ç±ÇÍÇ∆Ç¢Ç¡Çƒå¬ï Ç…í≤êÆÇ∑ÇÈéñÇ≈Ç‡Ç»Ç¢ÇÃÇ≈constÇ≈åàÇﬂë≈Çø)
+    {
+        if (source.pitch < PITCHLIMIT)
         {
-            source = target.GetComponent<AudioSource>();
-            source.PlayOneShot(audioClip);
+            source.pitch += PITCHUP;
         }
     }
 }
