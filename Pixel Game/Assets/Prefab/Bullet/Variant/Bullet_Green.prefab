@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5420551809523126494, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5615327647347236824, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.095747255
