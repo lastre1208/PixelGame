@@ -145,5 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfbec2e85d22b24fae6cc6deb033af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 50
-  zigzagSpeed: 1
+  length: 2
+  zigzagSpeed: 20
+  Move_X: 0.03
