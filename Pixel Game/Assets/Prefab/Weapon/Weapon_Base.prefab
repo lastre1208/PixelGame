@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 786959179557689231}
   - component: {fileID: 6127156612100763888}
   - component: {fileID: -5837008593534526710}
-  m_Layer: 0
+  - component: {fileID: 5770463002091741289}
+  m_Layer: 3
   m_Name: Weapon_Base
   m_TagString: Pixel
   m_Icon: {fileID: 0}
@@ -243,3 +244,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &5770463002091741289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362739448953813648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5c822c1e6720046acac09fd3da8dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitEvent:
+    m_PersistentCalls:
+      m_Calls: []
