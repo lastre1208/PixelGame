@@ -61,6 +61,10 @@ PrefabInstance:
       value: Bullet_Green
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4584195314632475890, guid: 3eb8b4c26e97b0f41996046b2b308a60, type: 3}

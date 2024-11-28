@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5615327647347236824}
   - component: {fileID: 4624138655400572605}
   - component: {fileID: 6608248760429400717}
-  - component: {fileID: 3544822910119170957}
   - component: {fileID: -5676234279252694091}
   - component: {fileID: 5420551809523126494}
   - component: {fileID: -274202314982976579}
+  - component: {fileID: 3544822910119170957}
   m_Layer: 0
   m_Name: Bullet_Base
   m_TagString: Bullet
@@ -134,19 +134,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3544822910119170957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55936589767973226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6769febe44e0e514994fa5ea5902ceb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
 --- !u!96 &-5676234279252694091
 TrailRenderer:
   serializedVersion: 3
@@ -325,3 +312,16 @@ MonoBehaviour:
   hitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3544822910119170957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55936589767973226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6769febe44e0e514994fa5ea5902ceb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}

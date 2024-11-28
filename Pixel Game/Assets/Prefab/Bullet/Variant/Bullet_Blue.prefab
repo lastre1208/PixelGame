@@ -33,6 +33,10 @@ PrefabInstance:
       value: Bullet_Blue
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 702485774470760576, guid: d695373383bfb2242965f6f29ad56006, type: 3}
@@ -125,5 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b012dd92e4d04b48a03a4f0f5d6cc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 702485774470760576, guid: d695373383bfb2242965f6f29ad56006, type: 3}
   Speed: 100

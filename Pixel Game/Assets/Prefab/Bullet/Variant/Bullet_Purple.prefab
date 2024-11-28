@@ -33,6 +33,10 @@ PrefabInstance:
       value: Bullet_Purple
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4498896665269700992, guid: 486e5cd8f02566b43adedef0f48d0b87, type: 3}
@@ -151,4 +155,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   length: 2
   zigzagSpeed: 20
-  Move_X: 0.03
+  Move_X: 0.05

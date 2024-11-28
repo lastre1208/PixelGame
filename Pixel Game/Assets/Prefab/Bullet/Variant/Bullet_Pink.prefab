@@ -33,6 +33,10 @@ PrefabInstance:
       value: Bullet_Pink
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Pink
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 3911658552813384758, guid: 10a7d53be4e3d3c43ba3a938c97984a4, type: 3}
@@ -125,5 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b012dd92e4d04b48a03a4f0f5d6cc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3911658552813384758, guid: 10a7d53be4e3d3c43ba3a938c97984a4, type: 3}
-  Speed: 50
+  Speed: 350

@@ -33,6 +33,10 @@ PrefabInstance:
       value: Bullet_SkyBlue
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Skyblue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4587967738104111613, guid: 1b712efcf05304a459a17f417c7055a9, type: 3}

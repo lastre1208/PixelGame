@@ -33,6 +33,10 @@ PrefabInstance:
       value: Bullet_Yellow
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 5831900949661392263, guid: 2a71c8b218c54d641945c0061b1f7013, type: 3}

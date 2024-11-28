@@ -21,6 +21,10 @@ PrefabInstance:
       value: 0.5270009
       objectReference: {fileID: 0}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: Target
+      value: Purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.SpeedRatio
       value: 2
       objectReference: {fileID: 0}
@@ -68,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7059219271362189498, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4498896665269700992}
     - target: {fileID: 7119900317617101934, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -89,3 +97,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+--- !u!114 &4498896665269700992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+  m_PrefabInstance: {fileID: 500804179474591505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d1d794b3bdef84984bc246acc0d27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
