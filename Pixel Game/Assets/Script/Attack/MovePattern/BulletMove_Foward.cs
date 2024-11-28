@@ -8,16 +8,24 @@ public class BulletMove_Foward : MonoBehaviour
 
     
     private AttackParameter bullet;
+    public AttackParameter Bullet
+    {
+        get { return bullet; }
+        set { bullet = value; }
+    }
     [SerializeField] string Target;
+    [SerializeField] bool Moving;
     private void Start()
     {
-        bullet= GameObject.Find(Target).GetComponent<AttackParameter>();
+        Bullet= GameObject.Find(Target).GetComponent<AttackParameter>();
         
     }
     // Update is called once per frame
     void Update()
     {
-        this.transform.position+= bullet.Speed* transform.up*Time.deltaTime;
-
+        if (Moving)
+        {
+            this.transform.position += Bullet.Speed * transform.up * Time.deltaTime;
+        }
     }
 }

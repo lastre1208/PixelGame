@@ -309,9 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe848f86f2c06d43be87c4b7c0a4f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3544822910119170957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,4 +321,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6769febe44e0e514994fa5ea5902ceb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  Target: 
+  Moving: 1

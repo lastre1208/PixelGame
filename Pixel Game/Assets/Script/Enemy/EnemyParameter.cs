@@ -9,4 +9,5 @@ public class EnemyParameter:MonoBehaviour
     public float Speed;
     public float Attack;
     public float Lv;
+    public float DamageTime;
 }
