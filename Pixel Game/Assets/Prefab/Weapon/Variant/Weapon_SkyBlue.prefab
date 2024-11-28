@@ -13,6 +13,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: Target
+      value: Skyblue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.SpeedRatio
       value: 4
       objectReference: {fileID: 0}

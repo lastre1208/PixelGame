@@ -21,6 +21,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: Target
+      value: Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: attackParameter.Speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.target
       value: 
       objectReference: {fileID: 8613241905820390580}
@@ -28,6 +36,10 @@ PrefabInstance:
       propertyPath: attackParameter.attackObject
       value: 
       objectReference: {fileID: 6033296632144050935, guid: da45e6926aa307e4db35270d5fd0d082, type: 3}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: attackParameter.deliteTimeRatio
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5943366223967160253, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

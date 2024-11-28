@@ -15,15 +15,17 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
     // Update is called once per frame
 
 
-    protected  void StartAttack(AttackParameter attackParameter)//UŒ‚‚µn‚ß
+    protected  void StartAttack(AttackParameter attackParameter,PlayerParameter playerParameter)//UŒ‚‚µn‚ß
     {
         if (canAttack)
         {
+            SetParameter(attackParameter, playerParameter);
             currentObject=Instantiate(attackParameter.attackObject, transform.position, transform.rotation);
+            
             canAttack = false;
         }
     }
-    protected void  UpdateAttack(AttackParameter attackParameter)
+    protected void  UpdateAttack(AttackParameter attackParameter,PlayerParameter playerParameter)
     {
         PerformAttack();
         if (JudgeDelete(attackParameter))
@@ -33,7 +35,7 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
                 EndAttack();
             }
             ResetTime();    
-            StartAttack(attackParameter);
+            StartAttack(attackParameter,playerParameter);
         }
     }
     protected  void PerformAttack()//UŒ‚’†(õ–½‚ğƒJƒEƒ“ƒg)
@@ -46,7 +48,7 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
     }
     protected  bool JudgeDelete(AttackParameter attackParameter)//õ–½‚ªs‚«‚½‚©”»’f‚·‚é
     {
-        return currentTime > attackParameter.deliteTimeRatio ;
+        return currentTime > attackParameter.deliteTime ;
     }
     protected  void ResetTime()//ŠÔƒŠƒZƒbƒgBÄ“xUŒ‚‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚é
     {
@@ -57,5 +59,12 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
     {
         Destroy(currentObject);
     }
-    
+    protected void SetParameter(AttackParameter attack, PlayerParameter player)//’e‚Ìƒpƒ‰ƒ[ƒ^[‚ÌZo
+    {
+        attack.damage = attack.damageRatio * player.Attack;
+        attack.Speed = attack.SpeedRatio * player.Speed;
+        attack.deliteTime = attack.deliteTimeRatio * player.AttackTime;
+     
+       
+    }
 }

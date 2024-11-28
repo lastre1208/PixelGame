@@ -8,7 +8,7 @@ public class ZigZag : MonoBehaviour
    
     [SerializeField] float length;
     [SerializeField] float zigzagSpeed;
-    private float Move_X=0.02f;
+    [SerializeField] float Move_X=0.02f;
     private float count;
     private Vector2 start;
     private bool Zigzag = false;
@@ -20,7 +20,7 @@ public class ZigZag : MonoBehaviour
     void Update()
     {
         transform.Translate(Move_X, 0, 0);
-        count += zigzagSpeed;
+        count += zigzagSpeed*Time.deltaTime;
         if (Move_X < 0)
         {
             {

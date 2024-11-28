@@ -7,7 +7,7 @@ public class BulletLaser : MonoBehaviour
     // Start is called before the first frame update
   
     [SerializeField] GameObject target;
-   
+    [SerializeField] GameObject L_collider;
     // Update is called once per frame
 
     private LineRenderer lineRenderer;
@@ -23,5 +23,10 @@ public class BulletLaser : MonoBehaviour
     void Update()
     {
         lineRenderer.SetPosition(0, transform.position);
+        Laser();
+    }
+    private void Laser()
+    {
+        GameObject point = Instantiate(L_collider, transform.position,transform.rotation);
     }
 }

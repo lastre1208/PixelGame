@@ -7,10 +7,25 @@ public class BulletMove_Foward : MonoBehaviour
     // Start is called before the first frame update
 
     
-    [SerializeField] Bullet bullet;
+    private AttackParameter bullet;
+    public AttackParameter Bullet
+    {
+        get { return bullet; }
+        set { bullet = value; }
+    }
+    [SerializeField] string Target;
+    [SerializeField] bool Moving;
+    private void Start()
+    {
+        Bullet= GameObject.Find(Target).GetComponent<AttackParameter>();
+        
+    }
     // Update is called once per frame
     void Update()
     {
-        this.transform.position+=( bullet.attackParameter.SpeedRatio* transform.up*Time.deltaTime);
+        if (Moving)
+        {
+            this.transform.position += Bullet.Speed * transform.up * Time.deltaTime;
+        }
     }
 }

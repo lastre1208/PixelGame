@@ -13,6 +13,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+      propertyPath: Target
+      value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.target
       value: 
       objectReference: {fileID: 2052801585546199430}
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 2062314386349419751, guid: 6d62f0c5c2e33a84e982f91aae2bd45b, type: 3}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.deliteTimeRatio
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5943366223967160253, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: m_LocalPosition.x

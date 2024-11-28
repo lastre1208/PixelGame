@@ -33,12 +33,28 @@ PrefabInstance:
       value: Bullet_SkyBlue
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: Target
+      value: Skyblue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4587967738104111613, guid: 1b712efcf05304a459a17f417c7055a9, type: 3}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624138655400572605, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624138655400572605, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624138655400572605, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420551809523126494, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Color.r
@@ -47,6 +63,10 @@ PrefabInstance:
     - target: {fileID: 5420551809523126494, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420551809523126494, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5420551809523126494, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
@@ -108,7 +128,12 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6608248760429400717, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -137,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8302855886224129532, guid: 1b712efcf05304a459a17f417c7055a9, type: 3}
+  L_collider: {fileID: 5885477718299114382, guid: 474e4fb8a0a86c2459dcdcec467445d6, type: 3}
 --- !u!120 &-101246205739364317
 LineRenderer:
   serializedVersion: 2
@@ -198,7 +224,7 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.99325156
+        time: 0.35522056
         value: 0
         inSlope: 0
         outSlope: 0
