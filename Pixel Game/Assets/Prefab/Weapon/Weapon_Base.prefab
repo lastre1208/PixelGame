@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 786959179557689231}
   - component: {fileID: 6127156612100763888}
   - component: {fileID: -5837008593534526710}
-  - component: {fileID: 5770463002091741289}
   m_Layer: 3
   m_Name: Weapon_Base
   m_TagString: Pixel
@@ -127,18 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d1d794b3bdef84984bc246acc0d27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackParameter:
-    target: {fileID: 8362739448953813648}
-    attackObject: {fileID: 55936589767973226, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
-    damageRatio: 10
-    damage: 0
-    deliteTimeRatio: 2
-    deliteTime: 0
-    SpeedRatio: 1
-    Speed: 0
-    canDelete: 0
-  playerParameter: {fileID: 0}
   touch: {fileID: 4148797866617681613}
+  Target: 
 --- !u!61 &786959179557689231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,18 +237,3 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &5770463002091741289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362739448953813648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5c822c1e6720046acac09fd3da8dfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HitEvent:
-    m_PersistentCalls:
-      m_Calls: []

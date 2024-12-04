@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: Target
-      value: Yellow
+      value: Y_Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
       propertyPath: attackParameter.target

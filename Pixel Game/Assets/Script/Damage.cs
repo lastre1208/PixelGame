@@ -4,24 +4,28 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public abstract class Damage : MonoBehaviour
+public abstract class Damage : MonoBehaviour//enemy=攻撃を受ける側、attack=攻撃する側
 {
 
-    [SerializeField] GameObject _defeatObject;
-    private GameObject _defeatPrefab;
-   protected void DamageEvent(EnemyParameter enemy,AttackParameter attack)
+   
+   protected bool DamageEvent(CommonParameter enemy,CommonParameter attack)
     {
         SetDamage(enemy,attack);
+        
         if (enemy.Hp < 0)
+        { 
+            return true;
+        }
+        else
         {
-            Death();
+            return false;
         }
     }
-    protected float GetDamage(AttackParameter attack)//ダメージ計算。
+    protected float GetDamage(CommonParameter attack)//ダメージ計算。
     {
-        return attack.damage;
+        return attack.Attack;
     }
-    protected void SetDamage(EnemyParameter enemy, AttackParameter attack)//計算されたダメージを付与
+    protected void SetDamage(CommonParameter enemy, CommonParameter attack)//計算されたダメージを付与
     {
         if (enemy == null)
         {
@@ -37,16 +41,6 @@ public abstract class Damage : MonoBehaviour
             enemy.Hp -= GetDamage(attack);
         }
     }
-   protected void Death()//ダメージによる死亡処理
-    {
-        PlayDeath();
-        Destroy(gameObject);
-        Debug.Log("うわああああ");
-    }
-     protected void PlayDeath()
-    {
-
-        _defeatPrefab = Instantiate(_defeatObject, this.gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
-       Debug.Log(_defeatPrefab.name);
-    } 
+   
+   
 }

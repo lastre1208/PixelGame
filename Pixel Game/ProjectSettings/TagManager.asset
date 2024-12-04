@@ -8,6 +8,16 @@ TagManager:
   - Pixel
   - Bullet
   - Enemy
+  - P_Status
+  - R_Bullet
+  - B_Bullet
+  - G_Bullet
+  - Pi_Bullet
+  - Y_Bullet
+  - Pu_Bullet
+  - Sky_Bullet
+  - Sound_SE_Bullet
+  - Exp
   layers:
   - Default
   - TransparentFX

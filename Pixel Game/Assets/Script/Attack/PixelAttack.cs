@@ -61,7 +61,7 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
     }
     protected void SetParameter(AttackParameter attack, PlayerParameter player)//’e‚Ìƒpƒ‰ƒ[ƒ^[‚ÌZo
     {
-        attack.damage = attack.damageRatio * player.Attack;
+        attack.Common_A.Attack = attack.damageRatio * player.Common_P.Attack;
         attack.Speed = attack.SpeedRatio * player.Speed;
         attack.deliteTime = attack.deliteTimeRatio * player.AttackTime;
      

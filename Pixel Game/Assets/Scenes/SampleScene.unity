@@ -738,6 +738,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430770297}
   m_CullTransparentMesh: 1
+--- !u!1 &431520376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431520378}
+  - component: {fileID: 431520377}
+  m_Layer: 0
+  m_Name: Status
+  m_TagString: P_Status
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &431520377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431520376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b389a17c4d575e944b57e4e049415e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Common_P:
+    maxHp: 100
+    Hp: 100
+    Attack: 10
+  Exp: 0
+  Speed: 1
+  AttackTime: 1
+  Lv: 1
+  N_Lv: 100
+  Lv_Rate: 2
+--- !u!4 &431520378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431520376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837284569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434443864
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +923,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 0.08679241, g: 0.08679241, b: 0.08679241, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -974,7 +1028,7 @@ GameObject:
   - component: {fileID: 529303157}
   m_Layer: 0
   m_Name: Pink
-  m_TagString: Untagged
+  m_TagString: Pi_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1008,7 +1062,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 1439193036403084494, guid: 08f9c4c580421a0488ff981331195538, type: 3}
   damageRatio: 10
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 0.75
   deliteTime: 0
   SpeedRatio: 7
@@ -1026,7 +1083,7 @@ GameObject:
   - component: {fileID: 546471724}
   m_Layer: 0
   m_Name: Red
-  m_TagString: Untagged
+  m_TagString: R_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,7 +1117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 6033296632144050935, guid: da45e6926aa307e4db35270d5fd0d082, type: 3}
   damageRatio: 100
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 5
   deliteTime: 0
   SpeedRatio: 1
@@ -1153,7 +1213,7 @@ GameObject:
   - component: {fileID: 573895497}
   m_Layer: 0
   m_Name: Purple
-  m_TagString: Untagged
+  m_TagString: Pu_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1247,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 5653575213986850749, guid: 65750a0613005c049be9e0144b09cf1a, type: 3}
   damageRatio: 15
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
   SpeedRatio: 5
@@ -1283,7 +1346,6 @@ GameObject:
   - component: {fileID: 837284565}
   - component: {fileID: 837284570}
   - component: {fileID: 837284571}
-  - component: {fileID: 837284573}
   m_Layer: 0
   m_Name: Pixel
   m_TagString: Player
@@ -1303,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673a3e0d3cdaa1478672a416a877ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerParameter: {fileID: 837284573}
+  playerParameter: {fileID: 431520377}
 --- !u!114 &837284566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,7 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 50
-  playerParameter: {fileID: 837284573}
+  playerParameter: {fileID: 431520377}
 --- !u!61 &837284567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1427,7 +1489,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 431520378}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &837284570
@@ -1507,26 +1570,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &837284573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837284564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b389a17c4d575e944b57e4e049415e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hp: 100
-  MaxHp: 100
-  Attack: 10
-  Exp: 0
-  Speed: 1
-  AttackTime: 1
-  Lv: 1
-  N_Lv: 100
 --- !u!1 &922413869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1582,7 @@ GameObject:
   - component: {fileID: 922413871}
   m_Layer: 0
   m_Name: Skyblue
-  m_TagString: Untagged
+  m_TagString: Sky_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1573,7 +1616,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 7057528532152900071, guid: 9870c8576ba9a1c4f89d67b31916d07d, type: 3}
   damageRatio: 10
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 2
   deliteTime: 0
   SpeedRatio: 5
@@ -1690,7 +1736,7 @@ GameObject:
   - component: {fileID: 1069521961}
   m_Layer: 0
   m_Name: Yellow
-  m_TagString: Untagged
+  m_TagString: Y_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1724,7 +1770,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 2062314386349419751, guid: 6d62f0c5c2e33a84e982f91aae2bd45b, type: 3}
   damageRatio: 3
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 0.5
   deliteTime: 0
   SpeedRatio: 10
@@ -2010,7 +2059,7 @@ GameObject:
   - component: {fileID: 1532413231}
   m_Layer: 0
   m_Name: Blue
-  m_TagString: Untagged
+  m_TagString: B_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2044,7 +2093,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 5530219356618485781, guid: b9eb154e2d6d1bc4a804725cfd38136d, type: 3}
   damageRatio: 20
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 10
   deliteTime: 0
   SpeedRatio: 3
@@ -2062,7 +2114,7 @@ GameObject:
   - component: {fileID: 1544756016}
   m_Layer: 0
   m_Name: SoundManager
-  m_TagString: Untagged
+  m_TagString: Sound_SE_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2190,7 +2242,7 @@ GameObject:
   - component: {fileID: 1593686912}
   m_Layer: 0
   m_Name: Green
-  m_TagString: Untagged
+  m_TagString: G_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2224,7 +2276,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackObject: {fileID: 7253597615579652467, guid: 928a538b705f9464eb1a7c7a77886cda, type: 3}
   damageRatio: 10
-  damage: 0
+  Common_A:
+    maxHp: 0
+    Hp: 0
+    Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
   SpeedRatio: 5

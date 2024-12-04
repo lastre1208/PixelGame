@@ -25,7 +25,7 @@ public class Bullet : PixelAttack//弾を一定の間隔で放つスクリプト。
     private void Start()
     {
      PlayerParameter   =  GameObject.FindWithTag("P_Status") .GetComponent<PlayerParameter>();
-        AttackParameter=GameObject.Find(Target) .GetComponent<AttackParameter>();
+        AttackParameter=GameObject.FindWithTag(Target) .GetComponent<AttackParameter>();
         
     }
     private void Update()
