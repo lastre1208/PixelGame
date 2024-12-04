@@ -283,8 +283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyParameter: {fileID: 7964032376060619121}
-  target: {fileID: 0}
-  t_name: Pixel
 --- !u!50 &4137498764454773710
 Rigidbody2D:
   serializedVersion: 4
@@ -329,6 +327,7 @@ MonoBehaviour:
   Attack: 0
   Lv: 0
   DamageTime: 1
+  Exp: 0
 --- !u!114 &5829673219884956666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,3 +340,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5c822c1e6720046acac09fd3da8dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defeatObject: {fileID: 2809537294764610230, guid: 8a2b2f27eb9a2f348a83bb16c452cc45, type: 3}

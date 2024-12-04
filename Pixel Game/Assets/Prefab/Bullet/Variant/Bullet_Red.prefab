@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0
       objectReference: {fileID: 0}
@@ -33,8 +37,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.099300385
+      value: 0.043361664
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676234279252694091, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 55936589767973226, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_Name
@@ -42,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: Target
-      value: Red
+      value: R_Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 3544822910119170957, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: bullet
@@ -66,15 +78,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615327647347236824, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5615327647347236824, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5615327647347236824, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5615327647347236824, guid: 6a98a20a8cad5b84798fea53e8c499c5, type: 3}
       propertyPath: m_LocalPosition.x

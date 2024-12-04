@@ -38,7 +38,6 @@ public class HitEnemy : Damage
             E_Damage();
            Delete();
            
-
         }
     }
     public void E_Damage()
@@ -62,7 +61,7 @@ public class HitEnemy : Damage
         lastCollision = collision.gameObject;
         return lastCollision;
     }
-    public void Delete()
+    public void Delete()//当たった時弾のオブジェクトを消す
     {
         if (AttackParameter != null)
         {

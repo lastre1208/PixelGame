@@ -17,7 +17,7 @@ public class BulletMove_Foward : MonoBehaviour
     [SerializeField] bool Moving;
     private void Start()
     {
-        Bullet= GameObject.Find(Target).GetComponent<AttackParameter>();
+        Bullet= GameObject.FindWithTag(Target).GetComponent<AttackParameter>();
         
     }
     // Update is called once per frame

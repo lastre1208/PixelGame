@@ -24,7 +24,7 @@ public class Bullet : PixelAttack//弾を一定の間隔で放つスクリプト。
     // Update is called once per frame
     private void Start()
     {
-     PlayerParameter   =  GameObject.Find("Pixel") .GetComponent<PlayerParameter>();
+     PlayerParameter   =  GameObject.FindWithTag("P_Status") .GetComponent<PlayerParameter>();
         AttackParameter=GameObject.Find(Target) .GetComponent<AttackParameter>();
         
     }

@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public abstract class Damage : MonoBehaviour
 {
+
+    [SerializeField] GameObject _defeatObject;
+    private GameObject _defeatPrefab;
    protected void DamageEvent(EnemyParameter enemy,AttackParameter attack)
     {
         SetDamage(enemy,attack);
@@ -34,8 +39,14 @@ public abstract class Damage : MonoBehaviour
     }
    protected void Death()//É_ÉÅÅ[ÉWÇ…ÇÊÇÈéÄñSèàóù
     {
+        PlayDeath();
         Destroy(gameObject);
         Debug.Log("Ç§ÇÌÇ†Ç†Ç†Ç†");
     }
-      
+     protected void PlayDeath()
+    {
+
+        _defeatPrefab = Instantiate(_defeatObject, this.gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
+       Debug.Log(_defeatPrefab.name);
+    } 
 }

@@ -7,12 +7,12 @@ public class EnemyMove : MonoBehaviour
     // Start is called before the first frame update
    
     [SerializeField]EnemyParameter enemyParameter;
-    [SerializeField]GameObject target;
-    [SerializeField] string t_name;
+    GameObject target;
+   
 
     private void Start()
     {
-        target=GameObject.Find(t_name);
+        target=GameObject.FindWithTag("Player");
     }
     // Update is called once per frame
     void Update()
