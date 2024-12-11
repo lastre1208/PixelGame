@@ -325,7 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Common_E:
     maxHp: 100
-    Hp: 100
+    hp: 0
     Attack: 10
   Speed: 0.5
   Lv: 0
@@ -347,6 +347,7 @@ MonoBehaviour:
   _audio: {fileID: 8300000, guid: 78a2e0e4ae429b44cb50eb9d29a15c94, type: 3}
   _effect: {fileID: 2809537294764610230, guid: 8a2b2f27eb9a2f348a83bb16c452cc45, type: 3}
   _Exp: {fileID: 671704972732795541, guid: b70fd64de4640144a86df1282640cd1a, type: 3}
+  _UIname: UIManager
 --- !u!82 &-2136731306381743773
 AudioSource:
   m_ObjectHideFlags: 0

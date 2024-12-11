@@ -9,7 +9,8 @@ public class HitEnemy : Damage
     [SerializeField] AudioClip _audio;
     [SerializeField] GameObject _effect;
     [SerializeField] GameObject _Exp;
-
+    [SerializeField] string _UIname;
+    DamageDisplay _display;
     private EnemyParameter EnemyParameter;
     private BulletMove_Foward AttackParameter;
     private GameObject exp_Prefab;
@@ -19,7 +20,7 @@ public class HitEnemy : Damage
     // Update is called once per frame
     private void Start()
     {
-       
+        _display = GameObject.FindWithTag(_UIname).GetComponent<DamageDisplay>();
     }
 
     private void Update()
@@ -45,7 +46,7 @@ public class HitEnemy : Damage
             EnemyParameter = this.GetComponent<EnemyParameter>();
             Hit = false ;
             E_Damage();
-          
+        
            Delete();
            
         }
@@ -64,6 +65,7 @@ public class HitEnemy : Damage
         {
             if (DamageEvent(EnemyParameter.Common_E, AttackParameter.Bullet.Common_A))
             {
+                _display.DisplayDamage(EnemyParameter, AttackParameter.Bullet.Common_A);
                 PlayDeath();
                 Destroy(gameObject);
             }

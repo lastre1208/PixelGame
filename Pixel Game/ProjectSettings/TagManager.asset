@@ -18,6 +18,7 @@ TagManager:
   - Sky_Bullet
   - Sound_SE_Bullet
   - Exp
+  - UIManager
   layers:
   - Default
   - TransparentFX

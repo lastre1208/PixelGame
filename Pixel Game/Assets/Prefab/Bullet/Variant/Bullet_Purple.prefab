@@ -154,5 +154,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   length: 2
-  zigzagSpeed: 20
-  Move_X: 0.05
+  zigzagSpeed: 40
+  Move_X: 10
