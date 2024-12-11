@@ -19,5 +19,6 @@ public class AttackParameter:MonoBehaviour
     [HideInInspector] 
     public float Speed;//ã‚É“¯‚¶I
     public bool canDelete;//“G‚É‚Ô‚Â‚©‚é“™‚ÅÁ‚¦‚é‚©‚Ç‚¤‚©
-
+    public AudioSource bulletAudio;
+    public AudioClip audioClip;
 }

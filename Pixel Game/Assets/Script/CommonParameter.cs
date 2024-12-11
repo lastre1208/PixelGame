@@ -6,6 +6,22 @@ using UnityEngine;
 public class CommonParameter 
 {
     public float maxHp;
-    public float Hp;
+    public float hp;
+    public float Hp
+    {
+        get { return hp; }
+        set
+        {
+            if (value > maxHp)
+            {
+                hp = maxHp;
+            }
+            else
+            {
+                hp = value;
+            }
+            
+        }
+    }
     public float Attack;
 }
