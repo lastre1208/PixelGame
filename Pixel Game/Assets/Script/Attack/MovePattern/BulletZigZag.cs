@@ -19,7 +19,7 @@ public class ZigZag : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(Move_X, 0, 0);
+        transform.Translate(Move_X*Time.deltaTime, 0, 0);
         count += zigzagSpeed*Time.deltaTime;
         if (Move_X < 0)
         {

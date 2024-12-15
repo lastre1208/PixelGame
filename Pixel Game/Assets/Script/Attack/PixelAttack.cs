@@ -21,7 +21,7 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
         {
             SetParameter(attackParameter, playerParameter);
             currentObject=Instantiate(attackParameter.attackObject, transform.position, transform.rotation);
-            
+            PlaySound(attackParameter);
             canAttack = false;
         }
     }
@@ -61,10 +61,18 @@ public abstract class PixelAttack : MonoBehaviour//UŒ‚‚Ì‹¤’Êˆ—BˆÚ“®©‘Ì‚Í‘¼‚
     }
     protected void SetParameter(AttackParameter attack, PlayerParameter player)//’e‚Ìƒpƒ‰ƒ[ƒ^[‚ÌZo
     {
-        attack.damage = attack.damageRatio * player.Attack;
+        attack.Common_A.Attack = attack.damageRatio * player.Common_P.Attack;
         attack.Speed = attack.SpeedRatio * player.Speed;
         attack.deliteTime = attack.deliteTimeRatio * player.AttackTime;
      
        
+    }
+    protected void PlaySound(AttackParameter attack)
+    {
+        if (attack.bulletAudio != null)
+        {
+attack.bulletAudio.PlayOneShot(attack.audioClip);
+        }
+        
     }
 }
