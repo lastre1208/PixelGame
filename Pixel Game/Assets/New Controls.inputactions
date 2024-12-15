@@ -178,6 +178,67 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "LevelUP",
+            "id": "99692d39-479e-4de1-98bc-9fa4d7b95566",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "9193dc64-fdae-4a83-ae6c-2766bb320b4e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0ca806a8-8570-4a23-b4ff-53e56983f385",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0455a9d7-1bfd-42a2-b07f-1fcf74728c81",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78d38772-21bc-4f4e-bc15-b0b202cedbc9",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c706e44-eb7b-40ac-aa65-6dcf07573c53",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

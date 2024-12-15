@@ -8,6 +8,7 @@ public class AttackParameter:MonoBehaviour
 
    
     public GameObject attackObject;//攻撃そのもの。
+    public int LV;//弾のレベル。
     public float damageRatio;//攻撃倍率。
     [HideInInspector]
    //プレイヤーの攻撃力と合わさって実際に求められる攻撃力
