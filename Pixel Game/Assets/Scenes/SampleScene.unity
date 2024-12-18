@@ -155,7 +155,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1245211902}
-  - {fileID: 364944884}
   m_Father: {fileID: 521469754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -247,7 +246,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 224588057}
         m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_MethodName: SetMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 224588057}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: ShuffleCostUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -401,7 +412,7 @@ GameObject:
   - component: {fileID: 118587514}
   - component: {fileID: 118587513}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,13 +429,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 247945943}
   m_Father: {fileID: 1335402562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118587513
 MonoBehaviour:
@@ -572,7 +584,7 @@ GameObject:
   - component: {fileID: 133036555}
   - component: {fileID: 133036554}
   m_Layer: 5
-  m_Name: Lv_Time
+  m_Name: Lv_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -591,7 +603,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 641882549}
-  - {fileID: 308781253}
   m_Father: {fileID: 521469754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -930,15 +941,390 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3265a0a90564621459a9fb5d6784b642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 431520377}
-  Attack:
-  - {fileID: 1532413231}
-  - {fileID: 1593686912}
-  - {fileID: 529303157}
-  - {fileID: 573895497}
-  - {fileID: 546471724}
-  - {fileID: 922413871}
-  - {fileID: 1069521961}
+  Menu:
+  - Name: {fileID: 713259392}
+    Lv: {fileID: 1248200948}
+    Cost: {fileID: 2096961659}
+    Button: {fileID: 2070162230}
+  - Name: {fileID: 635862608}
+    Lv: {fileID: 615028159}
+    Cost: {fileID: 1388089912}
+    Button: {fileID: 250345409}
+  - Name: {fileID: 1711794365}
+    Lv: {fileID: 1229521112}
+    Cost: {fileID: 760969013}
+    Button: {fileID: 795166907}
+  - Name: {fileID: 641882550}
+    Lv: {fileID: 308781254}
+    Cost: {fileID: 1188320332}
+    Button: {fileID: 133036554}
+  - Name: {fileID: 118587513}
+    Lv: {fileID: 247945944}
+    Cost: {fileID: 536441825}
+    Button: {fileID: 1335402563}
+  levelExecute:
+  - UpgradeTarget: {fileID: 546471722}
+    Lv_name: Red
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 10
+      Lv_grade: 10
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 15
+      Lv_grade: 20
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 20
+      Lv_grade: 25
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 30
+      Lv_grade: 10
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 40
+      Lv_grade: 10
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 50
+      Lv_grade: 10
+      Lv_type: 7
+      IsLimit: 0
+    - Lv_cost: 60
+      Lv_grade: 20
+      Lv_type: 7
+      IsLimit: 0
+    - Lv_cost: 75
+      Lv_grade: 50
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 75
+      Lv_grade: 50
+      Lv_type: 5
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 1532413229}
+    Lv_name: Blue
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 20
+      Lv_grade: 0
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 7
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 7
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 50
+      Lv_type: 6
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 1532413229}
+    Lv_name: Blue
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 0}
+    Lv_name: Green
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 0}
+    Lv_name: HP
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 0}
+    Lv_name: HP
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 0}
+    Lv_name: HP
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 0}
+    Lv_name: HP
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 0}
+    Lv_name: HP
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 0
+      IsLimit: 1
+  Shuffle: {fileID: 364944885}
+  Cost: 3
   LevelMenu: {fileID: 521469753}
 --- !u!1 &247945942
 GameObject:
@@ -952,7 +1338,7 @@ GameObject:
   - component: {fileID: 247945945}
   - component: {fileID: 247945944}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: LV_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,11 +1357,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 536441824}
-  m_Father: {fileID: 1335402562}
+  m_Father: {fileID: 118587512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240.00002, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247945944
@@ -1090,7 +1476,7 @@ GameObject:
   - component: {fileID: 250345407}
   - component: {fileID: 250345409}
   m_Layer: 5
-  m_Name: Lv_Attack
+  m_Name: Lv_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,8 +1495,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 635862607}
-  - {fileID: 615028158}
-  - {fileID: 1388089911}
   m_Father: {fileID: 521469754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1474,7 +1858,7 @@ GameObject:
   - component: {fileID: 308781255}
   - component: {fileID: 308781254}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: LV_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1493,11 +1877,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1188320331}
-  m_Father: {fileID: 133036553}
+  m_Father: {fileID: 641882549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240.00002, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308781254
@@ -1718,7 +2102,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 252.17392, y: 52.173912}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331469212
 MonoBehaviour:
@@ -1785,11 +2169,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 68985654}
+  m_Father: {fileID: 1245211902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -90}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364944885
@@ -2061,7 +2445,6 @@ MonoBehaviour:
   levelUp: {fileID: 224588057}
   Common_P:
     maxHp: 100
-    hp: 100
     Attack: 10
   Exp: 0
   Speed: 1
@@ -2709,10 +3092,10 @@ MonoBehaviour:
   damageRatio: 10
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
-  deliteTimeRatio: 0.75
+  deliteTimeRatio: 1
   deliteTime: 0
+  shotTimeRatio: 0.5
   SpeedRatio: 7
   Speed: 0
   canDelete: 1
@@ -2863,7 +3246,7 @@ GameObject:
   - component: {fileID: 536441826}
   - component: {fileID: 536441825}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Cost_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2885,7 +3268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 20}
+  m_AnchoredPosition: {x: 250, y: 20}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536441825
@@ -3038,10 +3421,10 @@ MonoBehaviour:
   damageRatio: 100
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
   deliteTimeRatio: 5
   deliteTime: 0
+  shotTimeRatio: 5
   SpeedRatio: 1
   Speed: 0
   canDelete: 0
@@ -3171,10 +3554,10 @@ MonoBehaviour:
   damageRatio: 15
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
+  shotTimeRatio: 2.5
   SpeedRatio: 5
   Speed: 0
   canDelete: 0
@@ -3417,7 +3800,7 @@ GameObject:
   - component: {fileID: 615028160}
   - component: {fileID: 615028159}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: LV_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3430,16 +3813,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615028157}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 250345406}
+  m_Children:
+  - {fileID: 1388089911}
+  m_Father: {fileID: 635862607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240.00002, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615028159
@@ -3628,7 +4012,7 @@ GameObject:
   - component: {fileID: 635862609}
   - component: {fileID: 635862608}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3645,13 +4029,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 615028158}
   m_Father: {fileID: 250345406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635862608
 MonoBehaviour:
@@ -3762,7 +4147,7 @@ GameObject:
   - component: {fileID: 641882551}
   - component: {fileID: 641882550}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3779,13 +4164,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 308781253}
   m_Father: {fileID: 133036553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641882550
 MonoBehaviour:
@@ -3896,7 +4282,7 @@ GameObject:
   - component: {fileID: 713259393}
   - component: {fileID: 713259392}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3913,13 +4299,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1248200947}
   m_Father: {fileID: 2070162227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713259392
 MonoBehaviour:
@@ -4066,7 +4453,7 @@ GameObject:
   - component: {fileID: 760969014}
   - component: {fileID: 760969013}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Cost_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4088,7 +4475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 20}
+  m_AnchoredPosition: {x: 250, y: 20}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760969013
@@ -4450,7 +4837,7 @@ GameObject:
   - component: {fileID: 795166908}
   - component: {fileID: 795166907}
   m_Layer: 5
-  m_Name: Lv_Speed
+  m_Name: Lv_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4469,7 +4856,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1711794364}
-  - {fileID: 1229521111}
   m_Father: {fileID: 521469754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5111,10 +5497,10 @@ MonoBehaviour:
   damageRatio: 10
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
   deliteTimeRatio: 2
   deliteTime: 0
+  shotTimeRatio: 3
   SpeedRatio: 5
   Speed: 0
   canDelete: 0
@@ -5479,7 +5865,7 @@ Transform:
   m_GameObject: {fileID: 1012923969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5547,10 +5933,10 @@ MonoBehaviour:
   damageRatio: 3
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
   deliteTimeRatio: 0.5
   deliteTime: 0
+  shotTimeRatio: 0.2
   SpeedRatio: 10
   Speed: 0
   canDelete: 1
@@ -5852,7 +6238,7 @@ GameObject:
   - component: {fileID: 1188320333}
   - component: {fileID: 1188320332}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Cost_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5874,7 +6260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 20}
+  m_AnchoredPosition: {x: 250, y: 20}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188320332
@@ -5990,7 +6376,7 @@ GameObject:
   - component: {fileID: 1229521113}
   - component: {fileID: 1229521112}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: LV_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6009,11 +6395,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 760969012}
-  m_Father: {fileID: 795166906}
+  m_Father: {fileID: 1711794364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240.00002, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229521112
@@ -6192,7 +6578,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 364944884}
   m_Father: {fileID: 68985654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6220,7 +6607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shuffle
+  m_text: Reroll
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d60db8ceaa4760a4885e48921f8c8dc5, type: 2}
   m_sharedMaterial: {fileID: 4124796739176690243, guid: d60db8ceaa4760a4885e48921f8c8dc5, type: 2}
@@ -6309,7 +6696,7 @@ GameObject:
   - component: {fileID: 1248200949}
   - component: {fileID: 1248200948}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: LV_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6326,12 +6713,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2070162227}
+  m_Children:
+  - {fileID: 2096961658}
+  m_Father: {fileID: 713259391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240.00002, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248200948
@@ -6659,7 +7047,7 @@ GameObject:
   - component: {fileID: 1335402564}
   - component: {fileID: 1335402563}
   m_Layer: 5
-  m_Name: Lv_Exp
+  m_Name: Lv_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6678,7 +7066,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 118587512}
-  - {fileID: 247945943}
   m_Father: {fileID: 521469754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6914,7 +7301,7 @@ GameObject:
   - component: {fileID: 1388089913}
   - component: {fileID: 1388089912}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Cost_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6932,11 +7319,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 250345406}
+  m_Father: {fileID: 615028158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259.99994, y: 20}
+  m_AnchoredPosition: {x: 250, y: 20}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388089912
@@ -7338,10 +7725,10 @@ MonoBehaviour:
   damageRatio: 20
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
   deliteTimeRatio: 10
   deliteTime: 0
+  shotTimeRatio: 4.5
   SpeedRatio: 3
   Speed: 0
   canDelete: 0
@@ -7660,10 +8047,10 @@ MonoBehaviour:
   damageRatio: 10
   Common_A:
     maxHp: 0
-    hp: 0
     Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
+  shotTimeRatio: 1
   SpeedRatio: 5
   Speed: 0
   canDelete: 1
@@ -7719,7 +8106,7 @@ GameObject:
   - component: {fileID: 1711794366}
   - component: {fileID: 1711794365}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7736,13 +8123,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1229521111}
   m_Father: {fileID: 795166906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711794365
 MonoBehaviour:
@@ -7931,7 +8319,7 @@ GameObject:
   - component: {fileID: 2070162228}
   - component: {fileID: 2070162230}
   m_Layer: 5
-  m_Name: Lv_HP
+  m_Name: Lv_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7950,8 +8338,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 713259391}
-  - {fileID: 1248200947}
-  - {fileID: 2096961658}
   m_Father: {fileID: 521469754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8065,7 +8451,7 @@ GameObject:
   - component: {fileID: 2096961660}
   - component: {fileID: 2096961659}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Cost_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8080,14 +8466,14 @@ RectTransform:
   m_GameObject: {fileID: 2096961657}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2070162227}
+  m_Father: {fileID: 1248200947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 20}
+  m_AnchoredPosition: {x: 250, y: 20}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096961659

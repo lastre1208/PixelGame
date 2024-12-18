@@ -36,8 +36,11 @@ public class Bullet : PixelAttack//弾を一定の間隔で放つスクリプト。
             Touched = true;
          
         }
-
-        UpdateAttack(AttackParameter, PlayerParameter);
+        if (Touched)
+        {
+            UpdateAttack(AttackParameter, PlayerParameter);
+        }
+       
     }
    
 
