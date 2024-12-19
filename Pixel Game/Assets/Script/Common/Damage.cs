@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using System;
 
 public abstract class Damage : MonoBehaviour//enemy=UŒ‚‚ğó‚¯‚é‘¤Aattack=UŒ‚‚·‚é‘¤
 {
@@ -12,7 +12,7 @@ public abstract class Damage : MonoBehaviour//enemy=UŒ‚‚ğó‚¯‚é‘¤Aattack=UŒ‚‚
     {
         SetDamage(enemy,attack);
         
-        if (enemy.Hp < 0)
+        if (enemy.Hp <= 0)
         { 
             return true;
         }
@@ -23,7 +23,8 @@ public abstract class Damage : MonoBehaviour//enemy=UŒ‚‚ğó‚¯‚é‘¤Aattack=UŒ‚‚
     }
     protected float GetDamage(CommonParameter attack)//ƒ_ƒ[ƒWŒvZB
     {
-        return attack.Attack;
+       
+        return Mathf.Round(attack.Attack);
     }
     protected void SetDamage(CommonParameter enemy, CommonParameter attack)//ŒvZ‚³‚ê‚½ƒ_ƒ[ƒW‚ğ•t—^
     {
@@ -38,7 +39,8 @@ public abstract class Damage : MonoBehaviour//enemy=UŒ‚‚ğó‚¯‚é‘¤Aattack=UŒ‚‚
         }
         else
         {
-            enemy.Hp -= GetDamage(attack);
+            Debug.Log(GetDamage(attack));
+           enemy.Hp -= GetDamage(attack);
         }
     }
    

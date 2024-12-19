@@ -11,4 +11,10 @@ public class EnemyParameter:MonoBehaviour
     public float Lv;
     public float DamageTime;
     public float Exp;
+
+    public float exp
+    {
+        get { return Exp; }
+        set { Exp = value; }
+    }
 }

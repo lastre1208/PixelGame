@@ -26,7 +26,7 @@ public abstract class PixelAttack : MonoBehaviour
         PerformAttack();
         UpdateAndRemoveExpiredObjects(attackParameter);
 
-        if (JudgeShot(attackParameter))
+        if (JudgeShot())
         {
             ResetShot();
             StartAttack(attackParameter, playerParameter);
@@ -58,8 +58,7 @@ public abstract class PixelAttack : MonoBehaviour
             }
         }
     }
-
-    protected bool JudgeShot(AttackParameter attackParameter)
+    protected bool JudgeShot()
     {
         return currentTimeShot < 0;
     }

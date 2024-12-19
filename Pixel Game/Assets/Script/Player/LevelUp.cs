@@ -57,6 +57,7 @@ public class LevelUp : MonoBehaviour
     [SerializeField] TMP_Text Shuffle;
     [SerializeField] int Cost;
     [SerializeField] GameObject LevelMenu;//レベルアップ時表示させるオブジェクト
+    [SerializeField] PixelDisplay display;
     PlayerParameter player;
     
     private LevelExecute[] SelectedExecute; 
@@ -73,6 +74,7 @@ public class LevelUp : MonoBehaviour
     public void OpenMenu()
     {
         Time.timeScale = 0;
+        display.PixelCount();
         LevelMenu.SetActive(true);
         SetMenu();
     }
@@ -155,11 +157,20 @@ public class LevelUp : MonoBehaviour
 
 
         IUpgread target = selected.UpgradeTarget.GetComponent<IUpgread>();
-        if (player.SkillPoint > selected.Lv[selected.Lv_lv-1].Lv_cost)
+        if (player.SkillPoint >= selected.Lv[selected.Lv_lv-1].Lv_cost)
         {
             float currentParameter = target.GetParameter(Upgrade.Lv_type);
-
-            float upgreadParameter = currentParameter + (currentParameter * Upgrade.Lv_grade / 100);
+            float upgreadParameter;
+            if (Upgrade.Lv_type==Lv_Type.Weapon_Shot)
+            {
+              upgreadParameter = currentParameter - (currentParameter * Upgrade.Lv_grade / 100);
+            }
+            else
+            {
+ 
+                upgreadParameter = currentParameter + (currentParameter * Upgrade.Lv_grade / 100);
+            }
+           
 
 
             target.SetParameter(Upgrade.Lv_type, upgreadParameter);
@@ -171,11 +182,6 @@ public class LevelUp : MonoBehaviour
 
         }
         
-
-
-
-      
-
         LoadLevelUp();
     }
     public void DisplayShuffle()
@@ -184,8 +190,15 @@ public class LevelUp : MonoBehaviour
     }
     public void ShuffleCostUp()
     {
+        if (player.SkillPoint >= Cost)
+        {
+ 
+            player.SkillPoint -= Cost;
         Cost ++;
         DisplayShuffle();
+            SetMenu();
+        }
+       
     }
    
 }

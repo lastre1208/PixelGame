@@ -63,16 +63,17 @@ public class HitEnemy : Damage
         }
         else
         {
+            _display.DisplayDamage(EnemyParameter, AttackParameter.Bullet.Common_A);
             if (DamageEvent(EnemyParameter.Common_E, AttackParameter.Bullet.Common_A))
             {
-                _display.DisplayDamage(EnemyParameter, AttackParameter.Bullet.Common_A);
+              
                 PlayDeath();
                 Destroy(gameObject);
             }
             else
             {
                 PlayHit();
-            }
+            }  
         }
     }
     public GameObject HitReturn(Collider2D collision)

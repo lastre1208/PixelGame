@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class HitPlayer : MonoBehaviour
+public class HitPlayer : Damage
 {
     // Start is called before the first frame update
   

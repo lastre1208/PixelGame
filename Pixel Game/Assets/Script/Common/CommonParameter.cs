@@ -6,7 +6,7 @@ using UnityEngine;
 public class CommonParameter 
 {
     public float maxHp;
-    private float hp;
+    public float hp;
     public float Hp
     {
         get { return hp; }

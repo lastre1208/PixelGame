@@ -1007,321 +1007,441 @@ MonoBehaviour:
     Lv_name: Blue
     Lv_lv: 1
     Lv:
+    - Lv_cost: 5
+      Lv_grade: 15
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 10
+      Lv_grade: 20
+      Lv_type: 6
+      IsLimit: 0
     - Lv_cost: 20
-      Lv_grade: 0
-      Lv_type: 6
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 6
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 6
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 20
+      Lv_grade: 30
       Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 25
+      Lv_grade: 20
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 35
+      Lv_grade: 35
       Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 5
+    - Lv_cost: 45
+      Lv_grade: 25
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 5
-      IsLimit: 0
-    - Lv_cost: 0
+    - Lv_cost: 55
       Lv_grade: 50
       Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 0
+      Lv_grade: 0
+      Lv_type: 6
       IsLimit: 1
-  - UpgradeTarget: {fileID: 1532413229}
-    Lv_name: Blue
-    Lv_lv: 1
-    Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 1
-  - UpgradeTarget: {fileID: 0}
+  - UpgradeTarget: {fileID: 1593686910}
     Lv_name: Green
     Lv_lv: 1
     Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 10
+      Lv_grade: 15
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 15
+      Lv_grade: 15
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 25
+      Lv_grade: 20
+      Lv_type: 7
+      IsLimit: 0
+    - Lv_cost: 30
+      Lv_grade: 20
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 40
+      Lv_grade: 25
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 50
+      Lv_grade: 25
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 55
+      Lv_grade: 25
+      Lv_type: 6
+      IsLimit: 0
+    - Lv_cost: 70
+      Lv_grade: 50
+      Lv_type: 8
       IsLimit: 0
     - Lv_cost: 0
       Lv_grade: 0
-      Lv_type: 0
+      Lv_type: 5
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 1069521959}
+    Lv_name: Yellow
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 15
+      Lv_grade: 15
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 25
+      Lv_grade: 15
+      Lv_type: 6
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 35
+      Lv_grade: 30
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 45
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 50
+      Lv_grade: 15
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 50
+      Lv_grade: 20
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 55
+      Lv_grade: 30
+      Lv_type: 5
+      IsLimit: 0
+    - Lv_cost: 70
+      Lv_grade: 50
+      Lv_type: 8
       IsLimit: 0
     - Lv_cost: 0
       Lv_grade: 0
       Lv_type: 0
       IsLimit: 1
-  - UpgradeTarget: {fileID: 0}
-    Lv_name: HP
+  - UpgradeTarget: {fileID: 529303155}
+    Lv_name: Pink
     Lv_lv: 1
     Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 10
+      Lv_grade: 15
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 15
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 20
+      Lv_grade: 20
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 30
+      Lv_grade: 25
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 35
+      Lv_grade: 15
+      Lv_type: 6
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 40
+      Lv_grade: 25
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 50
+      Lv_grade: 25
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 65
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
     - Lv_cost: 0
       Lv_grade: 0
       Lv_type: 0
       IsLimit: 1
-  - UpgradeTarget: {fileID: 0}
-    Lv_name: HP
+  - UpgradeTarget: {fileID: 573895495}
+    Lv_name: Purple
     Lv_lv: 1
     Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 15
+      Lv_grade: 15
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 25
+      Lv_grade: 15
+      Lv_type: 6
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 35
+      Lv_grade: 25
+      Lv_type: 6
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 45
+      Lv_grade: 20
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 50
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 55
+      Lv_grade: 25
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 60
+      Lv_grade: 20
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 70
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
     - Lv_cost: 0
       Lv_grade: 0
       Lv_type: 0
       IsLimit: 1
-  - UpgradeTarget: {fileID: 0}
-    Lv_name: HP
+  - UpgradeTarget: {fileID: 922413869}
+    Lv_name: Skublue
     Lv_lv: 1
     Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 10
+      Lv_grade: 15
+      Lv_type: 5
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 15
+      Lv_grade: 20
+      Lv_type: 6
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 20
+      Lv_grade: 25
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 25
+      Lv_grade: 15
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 30
+      Lv_grade: 20
+      Lv_type: 6
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 45
+      Lv_grade: 25
+      Lv_type: 7
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 55
+      Lv_grade: 20
+      Lv_type: 8
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 70
+      Lv_grade: 30
+      Lv_type: 6
       IsLimit: 0
     - Lv_cost: 0
       Lv_grade: 0
       Lv_type: 0
       IsLimit: 1
-  - UpgradeTarget: {fileID: 0}
+  - UpgradeTarget: {fileID: 431520376}
     Lv_name: HP
     Lv_lv: 1
     Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 5
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 8
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 16
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 24
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 30
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 30
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 35
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 45
+      Lv_grade: 10
       Lv_type: 0
       IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
+    - Lv_cost: 55
+      Lv_grade: 20
       Lv_type: 0
       IsLimit: 1
-  - UpgradeTarget: {fileID: 0}
-    Lv_name: HP
+  - UpgradeTarget: {fileID: 431520376}
+    Lv_name: Attack
     Lv_lv: 1
     Lv:
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+    - Lv_cost: 10
+      Lv_grade: 10
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 20
+      Lv_grade: 5
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 30
+      Lv_grade: 5
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 40
+      Lv_grade: 5
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 50
+      Lv_grade: 5
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 60
+      Lv_grade: 10
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 70
+      Lv_grade: 10
+      Lv_type: 1
+      IsLimit: 0
+    - Lv_cost: 80
+      Lv_grade: 20
+      Lv_type: 1
       IsLimit: 0
     - Lv_cost: 0
-      Lv_grade: 0
+      Lv_grade: 10
       Lv_type: 0
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 431520376}
+    Lv_name: Duration
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 10
+      Lv_grade: 10
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 20
+      Lv_grade: 5
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 30
+      Lv_grade: 5
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 40
+      Lv_grade: 5
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 50
+      Lv_grade: 5
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 60
+      Lv_grade: 10
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 70
+      Lv_grade: 10
+      Lv_type: 3
+      IsLimit: 0
+    - Lv_cost: 80
+      Lv_grade: 20
+      Lv_type: 3
       IsLimit: 0
     - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+      Lv_grade: 10
+      Lv_type: 3
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 431520376}
+    Lv_name: Speed
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 10
+      Lv_grade: 10
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 20
+      Lv_grade: 5
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 30
+      Lv_grade: 5
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 40
+      Lv_grade: 5
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 50
+      Lv_grade: 5
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 60
+      Lv_grade: 10
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 70
+      Lv_grade: 10
+      Lv_type: 2
+      IsLimit: 0
+    - Lv_cost: 80
+      Lv_grade: 20
+      Lv_type: 2
       IsLimit: 0
     - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+      Lv_grade: 10
+      Lv_type: 2
+      IsLimit: 1
+  - UpgradeTarget: {fileID: 431520376}
+    Lv_name: Exp
+    Lv_lv: 1
+    Lv:
+    - Lv_cost: 10
+      Lv_grade: 10
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 20
+      Lv_grade: 5
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 30
+      Lv_grade: 5
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 40
+      Lv_grade: 5
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 50
+      Lv_grade: 5
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 60
+      Lv_grade: 10
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 70
+      Lv_grade: 10
+      Lv_type: 4
+      IsLimit: 0
+    - Lv_cost: 80
+      Lv_grade: 20
+      Lv_type: 4
       IsLimit: 0
     - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
-      IsLimit: 0
-    - Lv_cost: 0
-      Lv_grade: 0
-      Lv_type: 0
+      Lv_grade: 10
+      Lv_type: 4
       IsLimit: 1
   Shuffle: {fileID: 364944885}
   Cost: 3
@@ -2445,6 +2565,7 @@ MonoBehaviour:
   levelUp: {fileID: 224588057}
   Common_P:
     maxHp: 100
+    hp: 0
     Attack: 10
   Exp: 0
   Speed: 1
@@ -3092,6 +3213,7 @@ MonoBehaviour:
   damageRatio: 10
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
@@ -3421,6 +3543,7 @@ MonoBehaviour:
   damageRatio: 100
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 5
   deliteTime: 0
@@ -3554,6 +3677,7 @@ MonoBehaviour:
   damageRatio: 15
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
@@ -5497,6 +5621,7 @@ MonoBehaviour:
   damageRatio: 10
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 2
   deliteTime: 0
@@ -5933,6 +6058,7 @@ MonoBehaviour:
   damageRatio: 3
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 0.5
   deliteTime: 0
@@ -7725,6 +7851,7 @@ MonoBehaviour:
   damageRatio: 20
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 10
   deliteTime: 0
@@ -8047,6 +8174,7 @@ MonoBehaviour:
   damageRatio: 10
   Common_A:
     maxHp: 0
+    hp: 0
     Attack: 0
   deliteTimeRatio: 1
   deliteTime: 0
