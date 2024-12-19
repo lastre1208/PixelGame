@@ -33,7 +33,7 @@ public class TouchPixel : MonoBehaviour
             ParentObject = collision.transform;
             transform.parent = ParentObject;
             gameObject.tag = ("Player");
-            gameObject.layer = default;
+            gameObject.layer = 7;
             lookPlayer.Look();
             SetTrigger();
             sound.PlaySound();

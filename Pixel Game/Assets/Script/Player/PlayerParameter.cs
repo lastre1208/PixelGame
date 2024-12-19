@@ -1,15 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 
-public class PlayerParameter: MonoBehaviour
+
+public class PlayerParameter: MonoBehaviour,IUpgread
 {
     [SerializeField] LevelUp levelUp;
     public CommonParameter Common_P;
     public float Exp;//経験値
+    public float Exp_Rate;//経験値取得倍率
     public float Speed;//速度
     public float AttackTime;//攻撃の持続時間
     public float Lv;//レベル
@@ -32,5 +33,28 @@ public class PlayerParameter: MonoBehaviour
             levelUp.OpenMenu();
         }
       
+    }
+    public float GetParameter(Lv_Type type)
+    {
+        return (type) switch
+        {
+            Lv_Type.HP => Common_P.maxHp,
+            Lv_Type.Attack => Common_P.Attack,
+            Lv_Type.Duration => AttackTime,
+           Lv_Type.Exp=> Exp_Rate,
+           Lv_Type.Speed => Speed,
+           _=> throw new ArgumentOutOfRangeException(nameof(type),type,null),
+        };
+    }
+    public void SetParameter(Lv_Type type, float value)
+    {
+        switch (type)
+        {
+            case Lv_Type.HP: Common_P.maxHp = value; break;
+            case Lv_Type.Attack: Common_P.Attack = value; break;
+            case Lv_Type.Duration: AttackTime = value; break;
+            case Lv_Type.Exp: Exp_Rate = value; break;
+            case Lv_Type.Speed: Speed = value; break;
+        }
     }
 }

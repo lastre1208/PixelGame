@@ -1,78 +1,87 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public abstract class PixelAttack : MonoBehaviour//攻撃の共通処理。移動自体は他のスクリプトに
+public abstract class PixelAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
+    protected float currentTimeShot;
+    protected bool canAttack = true;
 
-   
-   
-    protected float currentTime;
-    protected bool canAttack=true;
-    private GameObject currentObject;
-    // Update is called once per frame
+    // オブジェクトとその寿命タイマーを保持するリスト
+    private List<(GameObject obj, float timer)> currentObjects = new List<(GameObject, float)>();
 
-
-    protected  void StartAttack(AttackParameter attackParameter,PlayerParameter playerParameter)//攻撃し始め
+    protected void StartAttack(AttackParameter attackParameter, PlayerParameter playerParameter)
     {
         if (canAttack)
         {
             SetParameter(attackParameter, playerParameter);
-            currentObject=Instantiate(attackParameter.attackObject, transform.position, transform.rotation);
+            GameObject newObject = Instantiate(attackParameter.attackObject, transform.position, transform.rotation);
+            currentObjects.Add((newObject, 0f)); // 寿命タイマーを0で初期化してリストに追加
             PlaySound(attackParameter);
             canAttack = false;
         }
     }
-    protected void  UpdateAttack(AttackParameter attackParameter,PlayerParameter playerParameter)
+
+    protected void UpdateAttack(AttackParameter attackParameter, PlayerParameter playerParameter)
     {
         PerformAttack();
-        if (JudgeDelete(attackParameter))
+        UpdateAndRemoveExpiredObjects(attackParameter);
+
+        if (JudgeShot())
         {
-           if(currentObject != null)//敵にぶつかって寿命より先に死んでいる場合は時間経過で射出
-            {
-                EndAttack();
-            }
-            ResetTime();    
-            StartAttack(attackParameter,playerParameter);
+            ResetShot();
+            StartAttack(attackParameter, playerParameter);
         }
     }
-    protected  void PerformAttack()//攻撃中(寿命をカウント)
+
+    protected void PerformAttack()
     {
-        if (!canAttack)
+        currentTimeShot -= Time.deltaTime;
+
+        // 各オブジェクトのタイマーを更新
+        for (int i = 0; i < currentObjects.Count; i++)
         {
-            currentTime += Time.deltaTime;
+            currentObjects[i] = (currentObjects[i].obj, currentObjects[i].timer + Time.deltaTime);
         }
+    }
+
+    protected void UpdateAndRemoveExpiredObjects(AttackParameter attackParameter)
+    {
+        for (int i = currentObjects.Count - 1; i >= 0; i--)
+        {
+            var (obj, timer) = currentObjects[i];
+
+            // 寿命を超えたオブジェクトを削除
+            if (timer > attackParameter.deliteTime)
+            {
+                if (obj != null) Destroy(obj);
+                currentObjects.RemoveAt(i);
+            }
+        }
+    }
+    protected bool JudgeShot()
+    {
+        return currentTimeShot < 0;
+    }
+
+    protected void ResetShot()
+    {
+        canAttack = true;
        
     }
-    protected  bool JudgeDelete(AttackParameter attackParameter)//寿命が尽きたか判断する
-    {
-        return currentTime > attackParameter.deliteTime ;
-    }
-    protected  void ResetTime()//時間リセット。再度攻撃ができるようになる
-    {
-        currentTime = 0;
-        canAttack = true;
-    }
-    protected void EndAttack()//攻撃終了(敵にぶつかるか、寿命に達したら消去する)
-    {
-        Destroy(currentObject);
-    }
-    protected void SetParameter(AttackParameter attack, PlayerParameter player)//弾のパラメーターの算出
+
+    protected void SetParameter(AttackParameter attack, PlayerParameter player)
     {
         attack.Common_A.Attack = attack.damageRatio * player.Common_P.Attack;
         attack.Speed = attack.SpeedRatio * player.Speed;
         attack.deliteTime = attack.deliteTimeRatio * player.AttackTime;
-     
-       
+        currentTimeShot = attack.shotTimeRatio;
     }
+
     protected void PlaySound(AttackParameter attack)
     {
         if (attack.bulletAudio != null)
         {
-attack.bulletAudio.PlayOneShot(attack.audioClip);
+            attack.bulletAudio.PlayOneShot(attack.audioClip);
         }
-        
     }
 }

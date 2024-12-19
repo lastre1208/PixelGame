@@ -34,7 +34,7 @@ public void DisplayDamage(EnemyParameter enemy,CommonParameter attack)
             
 
         
-       text.text = attack.Attack.ToString();
+       text.text = Mathf.Round(attack.Attack).ToString();
        text.color = damageColor;
     }
     private float Normalize(float damage,float min,float max)
