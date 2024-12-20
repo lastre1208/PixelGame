@@ -18,6 +18,8 @@ public class PlayerParameter: MonoBehaviour,IUpgread
     public float Lv_Rate;
     public float SkillPoint;//各強化に用いるスキルポイント
     public float GetSP;//獲得できるスキルポイント
+    public float DamageTime;//ダメージを受けた後に発生する無敵時間
+
     private void Update()
     {
         if (Exp > N_Lv)

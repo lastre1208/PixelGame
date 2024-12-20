@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6608248760429400717}
   - component: {fileID: -5676234279252694091}
   - component: {fileID: 5420551809523126494}
-  - component: {fileID: -274202314982976579}
   - component: {fileID: 3544822910119170957}
   m_Layer: 0
   m_Name: Bullet_Base
@@ -297,18 +296,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &-274202314982976579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55936589767973226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe848f86f2c06d43be87c4b7c0a4f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3544822910119170957
 MonoBehaviour:
   m_ObjectHideFlags: 0

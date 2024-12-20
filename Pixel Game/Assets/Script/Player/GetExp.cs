@@ -15,7 +15,7 @@ public class GetExp : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
          PlayerParameter player= GameObject.FindWithTag("P_Status").GetComponent<PlayerParameter>();
-            player.Exp+=_Exp._exp;
+            player.Exp+=_Exp._exp*player.Exp_Rate;
             Destroy(gameObject);
         }
     }

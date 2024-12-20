@@ -90,6 +90,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4148797866617681613, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+    - {fileID: 4161975708588971233, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
+    - {fileID: 4079271775971190417, guid: 9fd573ca995fe8348aff58967a112411, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -117,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c302a19c90d913a469b6b7894c95b563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   _exp: 100
 --- !u!114 &8876674174473206727
 MonoBehaviour:

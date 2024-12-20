@@ -1,18 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+
+
 public class HitPlayer : Damage
 {
-    // Start is called before the first frame update
+    [SerializeField] PlayerParameter player;
+    [SerializeField] DamageManager damage;// プレイヤーのパラメーター
+    private EnemyParameter enemy;
   
-    
-    // Update is called once per frame
+    private void Start()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("P_Status").GetComponent<PlayerParameter>();
+            damage=GameObject.FindWithTag("Damage").GetComponent<DamageManager>();
+        }
+    }
+
+  
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") ) {
-           
-            Debug.Log(collision.name);
+        // 無敵状態中はダメージを受けない
+        if (!damage.Hit)
+            return;
+
+        if (collision.CompareTag("Enemy") && gameObject.tag==("Player"))
+        {
+            enemy = collision.GetComponent<EnemyParameter>();
+            if (enemy != null)
+            {
+                if (player != null)
+                {
+                    // ダメージ処理
+                    DamageEvent(player.Common_P, enemy.Common_E);
+                    Debug.Log(gameObject.name);
+                    // 無敵を開始
+                    damage.Hit = false;
+                }
+                else
+                {
+                    Debug.Log("Player not found");
+                }
+            }
+            else
+            {
+                Debug.Log("Enemy parameter not found");
+            }
         }
     }
 }

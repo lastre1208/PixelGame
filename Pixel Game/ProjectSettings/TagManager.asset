@@ -19,6 +19,7 @@ TagManager:
   - Sound_SE_Bullet
   - Exp
   - UIManager
+  - Damage
   layers:
   - Default
   - TransparentFX
